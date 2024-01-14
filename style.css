@@ -1,3 +1,21 @@
 a{
     text-decoration: none;
 }
+
+*{
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+main section {
+    width: 80%;
+}
