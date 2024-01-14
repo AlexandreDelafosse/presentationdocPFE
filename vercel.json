@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "your-source-folder", // Remplacez par le chemin de votre code source
+      "use": "@vercel/node"
+    }
+  ],
+  "functions": {
+    "api/**/*.js": {
+      "runtime": "@vercel/node"
+    }
+  },
+  "hooks": {
+    "prebuild": "npm install"
+  }
+}
