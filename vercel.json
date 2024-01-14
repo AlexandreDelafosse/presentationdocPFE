@@ -2,13 +2,18 @@
   "version": 2,
   "builds": [
     {
-      "src": ".",
-      "use": "@vercel/node",
-      "config": {
-        "commands": {
-          "build": "npm install"
-        }
-      }
+      "src": "public", // Le dossier contenant les fichiers statiques, y compris index.html
+      "use": "@vercel/static"
     }
-  ]
+  ],
+  "routes": [
+    { "handle": "filesystem" },
+    {
+      "src": "/.*",
+      "dest": "/index.html"
+    }
+  ],
+  "hooks": {
+    "prebuild": "npm install"
+  }
 }
