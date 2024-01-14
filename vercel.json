@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "your-source-folder", // Remplacez par le chemin de votre code source
+      "src": ".",
       "use": "@vercel/node"
     }
   ],
